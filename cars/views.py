@@ -29,7 +29,7 @@ def car_create(request):
 	context = {
     	"form":form,
     }
-	return render(request, 'create.html', context)
+	return render(request, 'car_create.html', context)
 
 
 def car_update(request, car_id):
@@ -45,7 +45,7 @@ def car_update(request, car_id):
 		"car_obj": car_obj ,
     	"form" :form ,
     }
-	return render(request, 'update.html' , context)
+	return render(request, 'car_update.html' , context)
 
 def car_delete(request, car_id):
 	car_obj = Car.objects.get(id =car_id)
